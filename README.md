@@ -24,10 +24,10 @@ Without any convection term, the map is :
 
 Now, adding a convection term (with params ABCD), we get instead :
 
-![alt text](https://github.com/ComputationalExplorer/PlanetarySimulation/gifs/map_demo.gif "Blue planet projection")
+![alt text](https://github.com/ComputationalExplorer/PlanetarySimulation/blob/master/gifs/map_demo.gif "Blue planet projection")
 
 The final result, projected on a rotating sphere :
 
-![alt text](https://github.com/ComputationalExplorer/PlanetarySimulation/gifs/planet_demo.gif "Blue planet demo")
+![alt text](https://github.com/ComputationalExplorer/PlanetarySimulation/blob/master/gifs/planet_demo.gif "Blue planet demo")
 
 # References
