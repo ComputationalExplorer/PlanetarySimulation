@@ -9,29 +9,19 @@ Created on Thu Jun 21 23:30:05 2018
 def sphereProjection(xy, xz, yz, imageInput):
     # Image Projection onto Sphere
     # https://en.wikipedia.org/wiki/Equirectangular_projection
-    # Download the test image from the Wikipedia page!
-    # FB36 - 20160731
     # imageInput : type PIL.Image
-    import math #, random
+    import math 
     from PIL import Image
-    imgxOutput = 768; imgyOutput = 768
     pi2 = math.pi * 2
-    # 3D Sphere Rotation Angles (arbitrary)
-    
-    # test image
-   # imageInput = Image.new('RGBA', (100,100), "blue")
-  
-    
-    #xy = 0 #    -pi2 * 0.25 #-pi2 * random.random()
-    #xz = -pi2 * 0.25 # -pi2 * random.random()
-    #yz = 0 #-pi2 * random.random()
-    
+
+    # 3D Sphere Rotation Angles    
     sxy = math.sin(xy); cxy = math.cos(xy)
     sxz = math.sin(xz); cxz = math.cos(xz)
     syz = math.sin(yz); cyz = math.cos(yz)
-    #imageInput = Image.open("Equirectangular_projection_SW.jpg")
-    #imageInput = Image.open("output8.png")
+
     (imgxInput, imgyInput) = imageInput.size #*0.9
+    #  imgxOutput = 768; imgyOutput = 768
+    imgxOutput = imgxInput; imgyOutput = imgyInput
     pixelsInput = imageInput.load()
     
     imageOutput = Image.new("RGBA", (imgxOutput, imgyOutput), (0, 0, 0, 0))
@@ -64,7 +54,8 @@ def sphereProjection(xy, xz, yz, imageInput):
                 if val == 0: # 1 intersection point
                     d = -dot
                 else: # 2 intersection points => choose the closest
-                    d = min(-dot + math.sqrt(val), -dot - math.sqrt(val))
+                    sqrt_val = math.sqrt(val)
+                    d = min(-dot + sqrt_val, -dot - sqrt_val)
                     xd = xo + xl * d
                     yd = yo + yl * d
                     zd = zo + zl * d
@@ -82,8 +73,5 @@ def sphereProjection(xy, xz, yz, imageInput):
                         pixelsOutput[xi, yi] = pixelsInput[ix, iy]
                     except:
                         pass
-    #imageOutput.save("World.png", "PNG")
-        
-  
         
     return imageOutput

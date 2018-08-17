@@ -18,10 +18,10 @@ sigma = 0.5
 kappa = 1e-1
 
 dt = 0.005
-size = 250 
+size = 300 
 
-nbSteps = 500
-nbPictures = 50
+nbSteps = 1000
+nbPictures = 100
 frameDuration = 0.1
 minStepForPicture = nbSteps / 2
 
@@ -33,6 +33,6 @@ background_label = "stars.png"
 cmap_name = 'Blues'
 
 xy_r = 0
-xz_r = -0.10
+xz_r = -0.002
 yz_r = 0.25 
 
