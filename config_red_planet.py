@@ -9,8 +9,8 @@ a = 1.0
 b = 1.0
 d_u = 1e-4
 d_v = 1e-4
-c_x = 0 #5e-2 
-c_y = 0 #5e-2
+c_x = 2e-1 #5e-2 
+c_y = 5e-2
 m_x = 20
 m_y = 10
 
@@ -27,10 +27,10 @@ minStepForPicture = nbSteps / 2
 
 gifFilePath = 'C:/Users/Admin/Documents/ComputationalExplorer/PlanetarySimulation/GIFs/'
 rootFilePath = 'C:/Users/Admin/Documents/ComputationalExplorer/PlanetarySimulation/'
-mapMovieName = 'map_demo_purple.gif' 
-planetMovieName = 'planet_demo_purple.gif'
+mapMovieName = 'map_demo_red.gif' 
+planetMovieName = 'planet_demo_red.gif'
 background_label = "stars.png"
-cmap_name = 'Purples'
+cmap_name = 'Reds'
 
 xy_r = 0
 xz_r = -0.002
