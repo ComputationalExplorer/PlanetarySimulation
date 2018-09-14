@@ -22,13 +22,17 @@ The resulting images (both for the flat "map" and the spherical "planet") are sa
 Here is an example, using the parameters from file 'config_blue_planet.py'.
 
 The evolution of the 'u' variable on a 2-d grid (the 'map' of the planet) looks like this:
+
 ![alt text](https://github.com/ComputationalExplorer/PlanetarySimulation/blob/master/gifs/map_demo.gif "Blue planet projection")
 
 The final result, projected on a rotating sphere :
+
 ![alt text](https://github.com/ComputationalExplorer/PlanetarySimulation/blob/master/gifs/planet_demo.gif "Blue planet demo")
 
 Here are the corresponding animations obtained if we multiply the c_x component of the convection term by a factor of 4 (see the configuration file 'config_red_planet.py) :
+
 ![alt text](https://github.com/ComputationalExplorer/PlanetarySimulation/blob/master/gifs/map_demo_red.gif "Blue planet projection")
+
 ![alt text](https://github.com/ComputationalExplorer/PlanetarySimulation/blob/master/gifs/planet_demo_red.gif "Blue planet demo")
 
 
